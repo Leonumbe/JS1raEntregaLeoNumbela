@@ -9,9 +9,9 @@ while (( apellido == "")){
     alert("error");
     apellido = prompt("Debe ingresar su Apellido");
 }
-//aca tengo un encrucijada porque si saco la variable parseInt me reconoce la condicion"nan" pero dps np me realiza la suma como numero
+//Aca estoy en una encrucijada, porque si saco la variable parseInt me reconoce la condicion, evito el NaN pero dps np me realiza la suma como numero
 let entrada = parseInt(prompt("Ingrese su presupuesto"));
-while (( entrada == "0")||(entrada == "")){
+while (( entrada == "0")||(entrada === "")){
         alert("error");
         entrada = parseInt(prompt("vuelva a ingresar su presupuesto"));
     }
@@ -57,3 +57,19 @@ if((respuesta == "Si")||(respuesta == "si")){
 }else{
         alert("Use su imaginacion, la va a necesitar....")
     }
+
+
+//Este fue el ejerciocio que pidio el profe que resolvamos, te lo habia pasado pero me lo pediste zip y colgue.
+
+let numero = parseInt(prompt("ingrese un numero"));
+
+for (let i = numero; i <= 12; i++) {
+    numero = + i;
+    if (numero == 8) {
+        break;
+    }
+    for (let y = 1; y <= 12; y++) {
+    resultado = numero * y;
+    alert(numero + " x " + y + " = " + resultado);
+    }
+}
